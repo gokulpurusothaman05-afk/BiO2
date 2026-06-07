@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div class="auth-page">
+        <div id="particles-js" style="position: absolute; width: 100%; height: 100%;"></div>
+
+        <div class="auth-container animate__animated animate__fadeIn" style="max-width: 600px;">
+            <!-- Header -->
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <img src="images/logoimg.webp" alt="Stackly Logo" style="width: 40px; height: 40px;">
+                    <span>Stackly</span>
+                </div>
+                <h1>Create Account</h1>
+                <p>Join the future of biotechnology innovation</p>
+            </div>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required>
+                </div>
+
+                <div class="form-group">
+                    <select name="role" class="form-control" required>
+                        <option value="">Select Your Role</option>
+                        <option value="researcher">Researcher</option>
+                        <option value="scientist">Scientist</option>
+                        <option value="lab-technician">Lab Technician</option>
+                        <option value="student">Student</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="organization" class="form-control" placeholder="Organization/Institution">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required minlength="8">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label class="remember-me">
+                        <input type="checkbox" name="terms" required>
+                        <span>I agree to the Terms of Service and </span>
+                    </label>
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label class="remember-me">
+                        <input type="checkbox" name="newsletter">
+                        <span>Subscribe to newsletter for research updates</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                    Create Account <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <div class="auth-divider">
+                <span>OR</span>
+            </div>
+
+            <!-- Social Signup -->
+           <div class="auth-social-group">
+                <a href="404.html" class="btn btn-outline auth-social-btn">
+                    <i class="fab fa-google"></i> Google
+                </a>
+                <a href="404.html" class="btn btn-outline auth-social-btn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+
+            <div class="auth-link">
+                Already have an account? <a href="login.html">Login</a>
+            </div>
+
+            <div class="auth-link" style="margin-top: 15px;">
+                <a href="index.html"><i class="fas fa-home"></i> Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Particles.js Configuration
+        if (typeof particlesJS !== 'undefined') {
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 60, density: { enable: true, value_area: 800 } },
+                    color: { value: '#00d4ff' },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 3, random: true },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: '#00d4ff',
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: 'none',
+                        random: false,
+                        straight: false,
+                        out_mode: 'out'
+                    }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: { enable: true, mode: 'grab' },
+                        onclick: { enable: true, mode: 'push' },
+                        resize: true
+                    }
+                },
+                retina_detect: true
+            });
+        }
+
+        // Form Submission
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const terms = this.querySelector('input[name="terms"]').checked;
+
+            // Validation
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+
+            if (password.length < 8) {
+                alert('Password must be at least 8 characters long!');
+                return;
+            }
+
+            if (!terms) {
+                alert('Please accept the Terms of Service and Privacy Policy!');
+                return;
+            }
+
+            // Get form data
+            const formData = {
+                firstName: this.querySelector('input[name="firstName"]').value,
+                lastName: this.querySelector('input[name="lastName"]').value,
+                email: this.querySelector('input[name="email"]').value,
+                phone: this.querySelector('input[name="phone"]').value,
+                role: this.querySelector('select[name="role"]').value,
+                organization: this.querySelector('input[name="organization"]').value,
+                newsletter: this.querySelector('input[name="newsletter"]').checked
+            };
+
+            // Success message and redirect
+            
+            setTimeout(() => {
+                window.location.href = '404.html';
+            }, 1000);
+        });
+
+        // Real-time password match validation
+        document.getElementById('confirmPassword').addEventListener('input', function() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = this.value;
+
+            if (confirmPassword && password !== confirmPassword) {
+                this.style.borderColor = '#f44336';
+            } else {
+                this.style.borderColor = '#4caf50';
+            }
+        });
+    </script>
+</body>
+</html>

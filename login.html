@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div class="auth-page">
+        <div id="particles-js" style="position: absolute; width: 100%; height: 100%;"></div>
+        
+        <div class="auth-container animate__animated animate__fadeIn">
+            <!-- Header -->
+            <div class="auth-header">
+                <div class="auth-logo">
+                    <img src="images/logoimg.webp" alt="Stackly Logo" style="width: 40px; height: 40px;">
+                    <span>Stackly</span>
+                </div>
+                <h1>Welcome Back</h1>
+                <p>Select your login type to continue</p>
+            </div>
+
+            <!-- Login Type Selection -->
+            <div class="login-options">
+                <button class="login-option-btn active" data-type="researcher">
+                    <i class="fas fa-microscope"></i> Researcher
+                </button>
+                <button class="login-option-btn" data-type="admin">
+                    <i class="fas fa-user-shield"></i> Admin
+                </button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form">
+                <input type="hidden" id="loginType" value="researcher">
+                
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span>Remember Me</span>
+                    </label>
+                    <a href="404.html" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                    Login <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <div class="auth-divider">
+                <span>OR</span>
+            </div>
+
+            <!-- Social Login -->
+            <div class="auth-social-group">
+                <a href="404.html" class="btn btn-outline auth-social-btn">
+                    <i class="fab fa-google"></i> Google
+                </a>
+                <a href="404.html" class="btn btn-outline auth-social-btn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+
+            <div class="auth-link">
+                Don't have an account? <a href="signup.html">Sign Up</a>
+            </div>
+
+            <div class="auth-link" style="margin-top: 15px;">
+                <a href="index.html"><i class="fas fa-home"></i> Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Particles.js Configuration
+        if (typeof particlesJS !== 'undefined') {
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 60, density: { enable: true, value_area: 800 } },
+                    color: { value: '#00d4ff' },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 3, random: true },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: '#00d4ff',
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: 'none',
+                        random: false,
+                        straight: false,
+                        out_mode: 'out'
+                    }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: { enable: true, mode: 'grab' },
+                        onclick: { enable: true, mode: 'push' },
+                        resize: true
+                    }
+                },
+                retina_detect: true
+            });
+        }
+
+        // Login Type Selection
+        const loginTypeBtns = document.querySelectorAll('.login-option-btn');
+        const loginTypeInput = document.getElementById('loginType');
+
+        loginTypeBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                loginTypeBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                loginTypeInput.value = this.dataset.type;
+            });
+        });
+
+        // Form Submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const loginType = loginTypeInput.value;
+            const email = this.querySelector('input[name="email"]').value;
+            const password = this.querySelector('input[name="password"]').value;
+
+            // Simple validation
+            if (email && password) {
+                // Redirect based on login type
+                if (loginType === 'researcher') {
+                    window.location.href = 'dashboard-researcher.html';
+                } else if (loginType === 'admin') {
+                    window.location.href = 'dashboard-admin.html';
+                }
+            } else {
+                alert('Please fill in all fields');
+            }
+        });
+    </script>
+</body>
+</html>

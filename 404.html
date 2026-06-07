@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 404 Error Page -->
+    <div class="error-page">
+        <div id="particles-js" style="position: absolute; width: 100%; height: 100%;"></div>
+
+        <div class="error-content animate__animated animate__fadeIn" style="position: relative; z-index: 2;">
+            <div class="error-icon animate__animated animate__bounceIn animate__delay-1s">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+
+            <h1 class="animate__animated animate__fadeInDown">404</h1>
+            <h2 class="animate__animated animate__fadeInUp">Page Not Found</h2>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">
+                Oops! The page you're looking for doesn't exist or has been moved.
+                <br>Let's get you back on track.
+            </p>
+
+            <div style="display: flex; gap: 20px; justify-content: center; margin-top: 40px; flex-wrap: wrap;" class="animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="javascript:history.back()" class="btn btn-primary btn-lg">
+    <i class="fas fa-home"></i> Go Back
+</a>
+                
+            </div>
+
+            
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Particles.js Configuration
+        if (typeof particlesJS !== 'undefined') {
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: '#00d4ff' },
+                    shape: { type: 'circle' },
+                    opacity: { value: 0.3, random: true },
+                    size: { value: 3, random: true },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: '#00d4ff',
+                        opacity: 0.2,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 1,
+                        direction: 'none',
+                        random: false,
+                        straight: false,
+                        out_mode: 'out'
+                    }
+                },
+                interactivity: {
+                    detect_on: 'canvas',
+                    events: {
+                        onhover: { enable: true, mode: 'grab' },
+                        resize: true
+                    }
+                },
+                retina_detect: true
+            });
+        }
+
+        // Search form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchQuery = this.querySelector('input').value;
+            if (searchQuery) {
+                alert('Search functionality would be implemented here. You searched for: ' + searchQuery);
+                // Redirect to home page
+                window.location.href = 'index.html';
+            }
+        });
+
+        // Auto-redirect after 30 seconds (optional)
+        let countdown = 30;
+        const autoRedirect = setInterval(() => {
+            countdown--;
+            if (countdown <= 0) {
+                clearInterval(autoRedirect);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+
+        // Clear auto-redirect if user interacts
+        document.addEventListener('click', () => {
+            clearInterval(autoRedirect);
+        });
+    </script>
+</body>
+</html>

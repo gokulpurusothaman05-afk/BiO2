@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="dna-loader">
+                <div class="dna-strand"></div>
+                <div class="dna-strand"></div>
+            </div>
+            <p class="loading-text">Loading Stackly...</p>
+        </div>
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo" data-aos="fade-right">
+                        <a href="#home">
+                            <img src="images/logoimg.webp" alt="Stackly Logo" width="40px" height="30px">
+                            <span>Stackly</span>
+                        </a>
+                    </div>
+                    
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="#home" class="nav-link active">Home</a></li>
+                            <li><a href="#about" class="nav-link">About</a></li>
+                            <li><a href="#services" class="nav-link">Services</a></li>
+                            <li><a href="#research" class="nav-link">Research</a></li>
+                            <li><a href="#team" class="nav-link">Team</a></li>
+                            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                            <li><a href="#contact" class="nav-link">Contact</a></li>
+                        </ul>
+                        <div class="nav-buttons">
+                            <a href="login.html" class="btn btn-outline">Login</a>
+                            <a href="signup.html" class="btn btn-primary">Get Started</a>
+                        </div>
+                    </div>
+                    
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="jarallax-container">
+            <div class="hero-particles" id="particles-js"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <img src="images/logoimg.webp">
+                <p class="hero-subtitle animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="200">
+                    Pioneering the Future of Biotechnology Innovation
+                </p>
+                <div class="hero-buttons animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-delay="400">
+                    <a href="404.html" class="btn btn-primary btn-lg">Get Started</a>
+                    <a href="404.html" class="btn btn-outline btn-lg">Learn More</a>
+                </div>
+                
+                <!-- Countdown Timer -->
+                <div class="countdown-section" data-aos="fade-up" data-aos-delay="600">
+                    <p class="countdown-label">Next Breakthrough Launch In:</p>
+                    <div id="countdown" class="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <a href="#about" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up">
+                    <i class="fas fa-flask"></i>
+                    <div class="stat-number" data-count="250">0</div>
+                    <p>Research Projects</p>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-microscope"></i>
+                    <div class="stat-number" data-count="150">0</div>
+                    <p>Scientists</p>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-award"></i>
+                    <div class="stat-number" data-count="85">0</div>
+                    <p>Awards Won</p>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-globe"></i>
+                    <div class="stat-number" data-count="45">0</div>
+                    <p>Countries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About Stackly</h2>
+                <p class="section-subtitle">Leading Innovation in Biotechnology</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="images/1.webp" alt="Biotech Lab">
+                    <div class="about-experience">
+                        <div class="exp-number">15+</div>
+                        <div class="exp-text">Years of Excellence</div>
+                    </div>
+                </div>
+                
+                <div class="about-text" data-aos="fade-left">
+                    <h3>Transforming Healthcare Through Innovation</h3>
+                    <p>Stackly is at the forefront of biotechnology innovation, dedicated to developing groundbreaking solutions that improve human health and wellbeing. Our team of world-class scientists and researchers work tirelessly to push the boundaries of what's possible.</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Cutting-Edge Research</h4>
+                                <p>Advanced genomic and molecular biology research</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Global Impact</h4>
+                                <p>Solutions reaching millions worldwide</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Sustainable Practices</h4>
+                                <p>Environmentally conscious biotechnology</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="404.html" class="btn btn-primary">Join Our Mission</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive Biotechnology Solutions</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>Genetic Engineering</h3>
+                    <p>Advanced gene editing and CRISPR technology for therapeutic applications</p>
+                    <a href="404.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Drug Development</h3>
+                    <p>Innovative pharmaceutical solutions from discovery to clinical trials</p>
+                    <a href="404.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Diagnostics</h3>
+                    <p>State-of-the-art diagnostic tools and biomarker discovery</p>
+                    <a href="404.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Agricultural Biotech</h3>
+                    <p>Sustainable crop enhancement and agricultural innovation</p>
+                    <a href="404.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <h3>Bioprocessing</h3>
+                    <p>Scalable biomanufacturing and fermentation technologies</p>
+                    <a href="404.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Bioinformatics</h3>
+                    <p>AI-powered data analysis and computational biology</p>
+                    <a href="404.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="research" id="research">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Research & Innovation</h2>
+                <p class="section-subtitle">Breakthrough Discoveries</p>
+            </div>
+            
+            <!-- Research Filters -->
+            <div class="research-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="*">All</button>
+                <button class="filter-btn" data-filter=".genomics">Genomics</button>
+                <button class="filter-btn" data-filter=".therapeutics">Therapeutics</button>
+                <button class="filter-btn" data-filter=".diagnostics">Diagnostics</button>
+                <button class="filter-btn" data-filter=".agriculture">Agriculture</button>
+            </div>
+            
+            <!-- Research Grid -->
+            <div class="research-grid isotope-grid">
+                <div class="research-item genomics" data-aos="fade-up">
+                    <div class="research-image">
+                        <img src="images/2.webp" alt="Genomics Research">
+                        <div class="research-overlay">
+                            <a href="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1200" class="research-popup">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="research-content">
+                        <span class="research-category">Genomics</span>
+                        <h3>Gene Therapy Advancement</h3>
+                        <p>Revolutionary approach to treating genetic disorders</p>
+                    </div>
+                </div>
+                
+                <div class="research-item therapeutics" data-aos="fade-up" data-aos-delay="100">
+                    <div class="research-image">
+                        <img src="images/3.webp" alt="Therapeutics">
+                        <div class="research-overlay">
+                            <a href="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200" class="research-popup">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="research-content">
+                        <span class="research-category">Therapeutics</span>
+                        <h3>Cancer Immunotherapy</h3>
+                        <p>Novel CAR-T cell therapy development</p>
+                    </div>
+                </div>
+                
+                <div class="research-item diagnostics" data-aos="fade-up" data-aos-delay="200">
+                    <div class="research-image">
+                        <img src="images/4.webp" alt="Diagnostics">
+                        <div class="research-overlay">
+                            <a href="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=1200" class="research-popup">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="research-content">
+                        <span class="research-category">Diagnostics</span>
+                        <h3>Rapid Disease Detection</h3>
+                        <p>Point-of-care diagnostic platforms</p>
+                    </div>
+                </div>
+                
+                <div class="research-item agriculture" data-aos="fade-up" data-aos-delay="300">
+                    <div class="research-image">
+                        <img src="images/5.webp" alt="Agriculture">
+                        <div class="research-overlay">
+                            <a href="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1200" class="research-popup">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="research-content">
+                        <span class="research-category">Agriculture</span>
+                        <h3>Drought-Resistant Crops</h3>
+                        <p>Climate-adaptive agricultural solutions</p>
+                    </div>
+                </div>
+                
+                <div class="research-item genomics" data-aos="fade-up" data-aos-delay="400">
+                    <div class="research-image">
+                        <img src="images/6.webp" alt="DNA Sequencing">
+                        <div class="research-overlay">
+                            <a href="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200" class="research-popup">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="research-content">
+                        <span class="research-category">Genomics</span>
+                        <h3>Next-Gen Sequencing</h3>
+                        <p>Ultra-fast genome analysis technology</p>
+                    </div>
+                </div>
+                
+                <div class="research-item therapeutics" data-aos="fade-up" data-aos-delay="500">
+                    <div class="research-image">
+                        <img src="images/7.webp" alt="Vaccine Development">
+                        <div class="research-overlay">
+                            <a href="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1200" class="research-popup">
+                                <i class="fas fa-search-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="research-content">
+                        <span class="research-category">Therapeutics</span>
+                        <h3>mRNA Vaccine Platform</h3>
+                        <p>Rapid response vaccine technology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Our Expert Team</h2>
+                <p class="section-subtitle">World-Class Scientists & Researchers</p>
+            </div>
+            
+            <div class="team-slider owl-carousel">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/img3.webp" alt="Dr. Sarah Johnson">
+                        <div class="member-social">
+                            <a href="404.html"><i class="fab fa-linkedin"></i></a>
+                            <a href="404.html"><i class="fab fa-twitter"></i></a>
+                            <a href="404.html"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p>Chief Scientific Officer</p>
+                        <span>Genetics & Genomics</span>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/img4.webp" alt="Dr. Michael Chen">
+                        <div class="member-social">
+                            <a href="404.html"><i class="fab fa-linkedin"></i></a>
+                            <a href="404.html"><i class="fab fa-twitter"></i></a>
+                            <a href="404.html"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Michael Chen</h3>
+                        <p>Head of Research</p>
+                        <span>Molecular Biology</span>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/img6.webp" alt="Dr. Emily Rodriguez">
+                        <div class="member-social">
+                            <a href="404.html"><i class="fab fa-linkedin"></i></a>
+                            <a href="404.html"><i class="fab fa-twitter"></i></a>
+                            <a href="404.html"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Emily Rodriguez</h3>
+                        <p>Director of Drug Development</p>
+                        <span>Pharmacology</span>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/img7.webp" alt="Dr. James Williams">
+                        <div class="member-social">
+                            <a href="404.html"><i class="fab fa-linkedin"></i></a>
+                            <a href="404.html"><i class="fab fa-twitter"></i></a>
+                            <a href="404.html"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. James Williams</h3>
+                        <p>Bioinformatics Lead</p>
+                        <span>Computational Biology</span>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/img4.webp" alt="Dr. Aisha Patel">
+                        <div class="member-social">
+                            <a href="404.html"><i class="fab fa-linkedin"></i></a>
+                            <a href="404.html"><i class="fab fa-twitter"></i></a>
+                            <a href="404.html"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Aisha Patel</h3>
+                        <p>Clinical Trials Director</p>
+                        <span>Clinical Research</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">What People Say</h2>
+                <p class="section-subtitle">Trusted by Industry Leaders</p>
+            </div>
+            
+            <div class="testimonials-slider slick-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Stackly's innovative approach to gene therapy has revolutionized our treatment protocols. Their research is truly groundbreaking."</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/t1.webp" alt="John Doe">
+                        <div class="author-info">
+                            <h4>John Doe</h4>
+                            <p>CEO, MedTech Corp</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"The diagnostic tools developed by Stackly have significantly improved our early detection rates. Outstanding work!"</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/t2.webp" alt="Jane Smith">
+                        <div class="author-info">
+                            <h4>Jane Smith</h4>
+                            <p>Director, Health Innovation Lab</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"Partnering with Stackly on agricultural biotech has transformed our crop yields. Truly remarkable science."</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/t3.webp" alt="Robert Brown">
+                        <div class="author-info">
+                            <h4>Robert Brown</h4>
+                            <p>VP, AgriGenesis</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>"The bioinformatics platform is a game-changer. Data analysis that used to take weeks now takes hours."</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/t1.webp" alt="Lisa Anderson">
+                        <div class="author-info">
+                            <h4>Lisa Anderson</h4>
+                            <p>Research Lead, BioData Institute</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's Discuss Your BioTech Needs</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Address</h3>
+                            <p>Evolve Studio<br>Begur,Karnataka</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Phone</h3>
+                            <p>+91 12345 67890</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>info@stackly.biotech<br>research@stackly.biotech</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Working Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
+                            </div>
+                            <div class="form-group">
+                                <select name="subject" class="form-control bootstrap-select" required>
+                                    <option value="">Select Subject</option>
+                                    <option value="research">Research Inquiry</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="careers">Careers</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column" data-aos="fade-up">
+                    <div class="footer-logo">
+                        <img src="images/logoimg.webp" alt="Stackly Logo" style="width: 40px; height: 40px;">
+                        <span>Stackly</span>
+                    </div>
+                    <p>Pioneering biotechnology innovation for a healthier, sustainable future.</p>
+                    <div class="social-links">
+                        <a href="404.html" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="404.html" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="404.html">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Genetic Engineering</a></li>
+                        <li><a href="#services">Drug Development</a></li>
+                        <li><a href="#services">Diagnostics</a></li>
+                        <li><a href="#services">Agricultural Biotech</a></li>
+                        <li><a href="#services">Bioinformatics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest updates and research news.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> +91 12345 67890</p>
+                        <p><i class="fas fa-envelope"></i> info@stackly.biotech</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Stackly BioTech. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                    <a href="404.html">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jarallax/2.1.2/jarallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.appear@1.0.1/jquery.appear.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
