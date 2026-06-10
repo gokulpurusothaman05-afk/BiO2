@@ -194,6 +194,20 @@ ul {
     color: var(--text-primary);
 }
 
+/* SVG logo sizing and variants */
+.site-logo {
+    width: 40px;
+    height: auto;
+    display: inline-block;
+}
+
+.hero-logo {
+    width: 140px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+}
+
 .logo i {
     color: var(--primary-color);
     font-size: 32px;

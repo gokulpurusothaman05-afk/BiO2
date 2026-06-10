@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Stackly logo">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#0099ff"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0%" stop-color="#7be495"/>
+      <stop offset="100%" stop-color="#38b48b"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#g1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 8c8 8 8 40 0 48" />
+    <path d="M46 8c-8 8-8 40 0 48" />
+    <path d="M32 8v48" stroke-width="1.8" stroke="url(#g2)"/>
+  </g>
+  <g fill="url(#g1)">
+    <circle cx="20" cy="14" r="2.5"/>
+    <circle cx="44" cy="18" r="2.5"/>
+    <circle cx="20" cy="38" r="2.5"/>
+    <circle cx="44" cy="42" r="2.5"/>
+  </g>
+</svg>
