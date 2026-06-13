@@ -201,6 +201,53 @@ ul {
     display: inline-block;
 }
 
+/* Colorize monochrome/transparent bitmap logos to match the theme.
+   This uses CSS filters to tint the image toward the primary color variable.
+   Tweak filter values if you need a different hue/saturation. */
+.site-logo {
+    /* Remove previous destructive filters */
+    filter: none;
+}
+
+/* Use the bitmap as a mask so we can color it exactly with CSS.
+   This works best for monochrome logos with transparency. */
+.logo-mark,
+.site-logo.mask {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    -webkit-mask-image: url('../images/logoimg.webp');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    mask-image: url('../images/logoimg.webp');
+}
+
+/* Larger hero variant */
+.hero .logo-mark,
+.hero .site-logo.mask {
+    width: 140px;
+    height: auto;
+    aspect-ratio: 140 / 140;
+}
+
+/* Accessible visually-hidden fallback for original img elements */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
 .hero-logo {
     width: 140px;
     height: auto;
